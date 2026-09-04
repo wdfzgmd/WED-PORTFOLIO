@@ -17,17 +17,43 @@ const activities = [
 ];
 
 const certifications = [
-  "Introduction to Artificial Intelligence (40 Hours) — KAUST Academy",
-  "SAMAI Program — Saudi Data & AI Authority (SDAIA)",
-  "Introduction to Data Science in Python — University of Michigan (Coursera)",
-  "Linear Algebra for Machine Learning and Data Science — DeepLearning.AI (Coursera)",
+  {
+    title: "Introduction to Artificial Intelligence",
+    org: "KAUST Academy — 40 Hours",
+    file: "/certificates/kaust-ai.pdf",
+  },
+  {
+    title: "SAMAI Program — Stage 1",
+    org: "Saudi Data & AI Authority (SDAIA)",
+    file: "/certificates/sdaia-samai-1.pdf",
+  },
+  {
+    title: "SAMAI Program — Stage 2",
+    org: "Saudi Data & AI Authority (SDAIA)",
+    file: "/certificates/sdaia-samai-2.pdf",
+  },
+  {
+    title: "Introduction to Data Science in Python",
+    org: "University of Michigan (Coursera)",
+    file: "/certificates/coursera-python-1.pdf",
+  },
+  {
+    title: "Linear Algebra for Machine Learning and Data Science",
+    org: "DeepLearning.AI (Coursera)",
+    file: "/certificates/deeplearning-linear-algebra.pdf",
+  },
+  {
+    title: "Calculus for Machine Learning and Data Science",
+    org: "DeepLearning.AI (Coursera)",
+    file: "/certificates/deeplearning-calculus.pdf",
+  },
 ];
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="max-w-3xl mx-auto px-6 py-24">
+    <section id="leadership" className="max-w-5xl mx-auto px-6 py-24">
       <h2 className="text-3xl font-bold mb-10">Leadership & Activities</h2>
-      <div className="space-y-6 mb-16">
+      <div className="space-y-6 mb-20 max-w-3xl">
         {activities.map((item) => (
           <div key={item.title}>
             <h3 className="font-semibold">
@@ -38,12 +64,17 @@ export default function Leadership() {
         ))}
       </div>
 
-      <h2 className="text-3xl font-bold mb-6">Certifications</h2>
-      <ul className="list-disc list-inside text-gray-600 space-y-2">
+      <h2 className="text-3xl font-bold mb-10">Certifications</h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {certifications.map((cert) => (
-          <li key={cert}>{cert}</li>
+          <a key={cert.title} href={cert.file} target="_blank" rel="noopener noreferrer" className="border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-gray-300 transition block">
+            <div className="text-2xl mb-3">📜</div>
+            <h3 className="font-semibold text-sm mb-1">{cert.title}</h3>
+            <p className="text-gray-500 text-xs mb-3">{cert.org}</p>
+            <span className="text-xs text-blue-600 font-medium">View Certificate →</span>
+          </a>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
