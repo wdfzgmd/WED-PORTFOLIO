@@ -16,8 +16,7 @@ export default function Education() {
           <h3 className="text-xl font-semibold text-[#412402]">King Fahd University of Petroleum and Minerals (KFUPM)</h3>
           <span className="text-sm text-[#8a6f4e]">Expected May 2028</span>
         </div>
-        <p className="text-[#8a6f4e] mb-6">B.Sc. Computer Engineering — GPA: 3.537 / 4.00</p>
-
+<p className="text-[#8a6f4e] mb-6">B.Sc. Computer Engineering — GPA: 3+ / 4.00</p>
         <div className="mb-6">
           <p className="text-[#412402] font-medium mb-2">Awarded 1st, 2nd, and 3rd Academic Honors across six consecutive semesters</p>
           <div className="flex flex-wrap gap-2">
